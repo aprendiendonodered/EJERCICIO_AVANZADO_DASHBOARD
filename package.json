@@ -2,7 +2,10 @@
     "name": "EJERCICIO_AVANZADO_DASHBOARD",
     "description": "Avanzado dashboard para Escape Room",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-dashboard": "3.1.2",
+        "node-red-node-base64": "0.3.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",

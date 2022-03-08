@@ -1,1 +1,980 @@
-[]
+[
+    {
+        "id": "c1cb5db9.094de",
+        "type": "tab",
+        "label": "Game flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "81467baf.f38798",
+        "type": "ui_group",
+        "name": "Tiempo",
+        "tab": "4811cdf5.f09ea4",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3ada7ef5.741682",
+        "type": "ui_group",
+        "name": "Pistas",
+        "tab": "4811cdf5.f09ea4",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "b577ee1e.21f51",
+        "type": "ui_group",
+        "name": "Tiempo",
+        "tab": "bb157439.03bf48",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false
+    },
+    {
+        "id": "bf40a062.1bae4",
+        "type": "ui_group",
+        "name": "Pista cables",
+        "tab": "bb157439.03bf48",
+        "order": 2,
+        "disp": true,
+        "width": "18",
+        "collapse": false
+    },
+    {
+        "id": "5dd64cb0.643974",
+        "type": "ui_group",
+        "name": "Pista exp",
+        "tab": "bb157439.03bf48",
+        "order": 3,
+        "disp": true,
+        "width": "18",
+        "collapse": false
+    },
+    {
+        "id": "ef5b801b.aadf9",
+        "type": "ui_group",
+        "name": "Pista puerta",
+        "tab": "bb157439.03bf48",
+        "order": 4,
+        "disp": true,
+        "width": "18",
+        "collapse": false
+    },
+    {
+        "id": "4811cdf5.f09ea4",
+        "type": "ui_tab",
+        "name": "Game Master",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bb157439.03bf48",
+        "type": "ui_tab",
+        "name": "Room",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c81d3b58e22d6cdc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8aca44f4.123ed8",
+        "type": "inject",
+        "z": "c1cb5db9.094de",
+        "name": "Setup",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "c4990fea.c7b6c"
+            ]
+        ]
+    },
+    {
+        "id": "c4990fea.c7b6c",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gameState",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "timeRemaining",
+                "pt": "global",
+                "to": "3600000",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "currentTime",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f002ee3.678592",
+        "type": "inject",
+        "z": "c1cb5db9.094de",
+        "name": "Loop",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.01",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "9f528ec9.f8517"
+            ]
+        ]
+    },
+    {
+        "id": "9f528ec9.f8517",
+        "type": "function",
+        "z": "c1cb5db9.094de",
+        "name": "Actualizar tiempo restante",
+        "func": "var currentTime = msg.payload;\nvar lastTickTime = global.get(\"lastTickTime\")||currentTime; //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Operadores_l%C3%B3gicos\nvar timeRemaining=global.get(\"timeRemaining\")||0;\nvar gameState=global.get(\"gameState\");\n\nif(gameState==\"playing\"){\n    timeRemaining -= (currentTime - lastTickTime);\n    global.set(\"timeRemaining\",timeRemaining);\n}\n\nmsg.timeRemaining=timeRemaining;\nglobal.set(\"lastTickTime\",currentTime);\nnode.status({fill:\"green\",shape:\"dot\",text:timeRemaining});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "9d4d387a.a24378"
+            ]
+        ]
+    },
+    {
+        "id": "9d4d387a.a24378",
+        "type": "function",
+        "z": "c1cb5db9.094de",
+        "name": "Dar formato al tiempo mm:ss:ms",
+        "func": "var t=msg.timeRemaining/1000;\nvar h=Math.floor(t/3600);\nvar m = Math.floor(t%3600 /60);\nvar s = Math.floor(t%3600%60);\nvar ms = Math.floor((t%3600 % 60)* 100);\n\nmsg.formattedTimeRemaining = (\"0\"+m).slice(-2)+\":\"+(\"0\"+s).slice(-2)+\":\"+(\"0\"+ms).slice(-2);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "2826c02.3934c4",
+                "1e929c03.319314"
+            ]
+        ]
+    },
+    {
+        "id": "2826c02.3934c4",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "81467baf.f38798",
+        "name": "Tiempo GM",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "format": "<div layout=\"row\" layout-align=\"space-between\">\n    <span class=\"label\">\n        <i class=\"fa fa-clock-o fa-3x nr-dashboard-ok\"></i>\n    </span>\n    <span class=\"value\" style=\"color:#1EFA01; font-size:50px;font-family:digital-7 mono\">\n        {{msg.formattedTimeRemaining}}\n    </span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 850,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f63ae2d3.f5b7b",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "81467baf.f38798",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "PLAY",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#47F20E",
+        "icon": "fa-play",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "a70482fa.ceb63"
+            ]
+        ]
+    },
+    {
+        "id": "8e6c66f6.1ab818",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "81467baf.f38798",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "PAUSE",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#F30A0A",
+        "icon": "fa-pause",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "c46fc66e.ae62c8"
+            ]
+        ]
+    },
+    {
+        "id": "54525458.b5868c",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "81467baf.f38798",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#4102FD",
+        "icon": "fa-fast-backward",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "9fc92623.3409d8"
+            ]
+        ]
+    },
+    {
+        "id": "a70482fa.ceb63",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gameState",
+                "pt": "global",
+                "to": "playing",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c46fc66e.ae62c8",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gameState",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9fc92623.3409d8",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timeRemaining",
+                "pt": "global",
+                "to": "3600000",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54aa7cc6.40fc74",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "3ada7ef5.741682",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "CABLES",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#47F20E",
+        "className": "",
+        "icon": "fa-bell",
+        "payload": "{\"group\":{\"hide\":[\"Room_Tiempo\",\"Room_Pista_exp\",\"Room_Pista_puerta\"],\"show\":[\"Room_Pista_cables\"],\"focus\":true}}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "27ed27af.3602c8",
+                "802b63d129bee504"
+            ]
+        ]
+    },
+    {
+        "id": "a61adadb.4db058",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "3ada7ef5.741682",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "OCULTAR",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#f30a0a",
+        "icon": "fa-bell-slash",
+        "payload": "{\"group\":{\"hide\":[\"Room_Pista_cables\",\"Room_Pista_exp\",\"Room_Pista_puerta\"],\"show\":[\"Room_Tiempo\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 90,
+        "y": 460,
+        "wires": [
+            [
+                "fd68489a.6dabb8",
+                "27ed27af.3602c8"
+            ]
+        ]
+    },
+    {
+        "id": "4a4e2972.b39e08",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "3ada7ef5.741682",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "EXPERTO",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#47F20E",
+        "icon": "fa-bell",
+        "payload": "{\"group\":{\"hide\":[\"Room_Tiempo\",\"Room_Pista_cables\",\"Room_Pista_puerta\"],\"show\":[\"Room_Pista_exp\"],\"focus\":true}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "27ed27af.3602c8",
+                "beff0fd3d3e6e8b4"
+            ]
+        ]
+    },
+    {
+        "id": "a7177cd.417338",
+        "type": "ui_button",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "group": "3ada7ef5.741682",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "PUERTA",
+        "tooltip": "",
+        "color": "#050505",
+        "bgcolor": "#47F20E",
+        "icon": "fa-bell",
+        "payload": "{\"group\":{\"hide\":[\"Room_Tiempo\",\"Room_Pista_exp\",\"Room_Pista_cables\"],\"show\":[\"Room_Pista_puerta\"],\"focus\":true}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 100,
+        "y": 420,
+        "wires": [
+            [
+                "27ed27af.3602c8",
+                "91444b70193fe34d"
+            ]
+        ]
+    },
+    {
+        "id": "342cdb78.d07fe4",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "3ada7ef5.741682",
+        "name": "Previsualización Pista",
+        "order": 4,
+        "width": "12",
+        "height": "8",
+        "format": "<style>\n    img{\n        position:absolute;\n        height: 400px;\n    }\n</style>\n<div class=\"imagen\">\n    <img src=\"data:image/jpg;base64,{{msg.payload}}\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd68489a.6dabb8",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "342cdb78.d07fe4"
+            ]
+        ]
+    },
+    {
+        "id": "1e929c03.319314",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "b577ee1e.21f51",
+        "name": "Tiempo Room",
+        "order": 1,
+        "width": 18,
+        "height": 8,
+        "format": "<style>\n    .nr-dashboard-theme ui-card-panel{\n        background-color:rgba(0,0,0,0);\n        border:rgba(0,0,0,0) 1px solid;\n        background-position:center;\n    }\n    \n    body.nr-dashboard-theme md-content md-card{\n        background-color:rgba(0,0,0,0);\n        border:rgba(0,0,0,0) 1px solid;\n        background-position:center;\n        overflow:hidden;\n    }\n    \n    .time-overlay{\n        text-align:center;\n        position:absolute;\n        margin:auto;\n        width:100%;\n        top:160px;\n        font-size:215px;\n        font-family:digital-7 mono;\n        color:#FCF516;\n    }\n</style>\n\n<div class=\"time-overlay\">{{msg.formattedTimeRemaining}}</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "291e77f3.d4d988",
+        "type": "ui_ui_control",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "events": "all",
+        "x": 320,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d136cfad.f7089",
+        "type": "catch",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 680,
+        "wires": [
+            [
+                "8aee65c4.b24218"
+            ]
+        ]
+    },
+    {
+        "id": "8aee65c4.b24218",
+        "type": "debug",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "4431e338.0a71fc",
+        "type": "ui_text",
+        "z": "c1cb5db9.094de",
+        "group": "bf40a062.1bae4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Cables",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8d129408.d2d318",
+        "type": "ui_text",
+        "z": "c1cb5db9.094de",
+        "group": "5dd64cb0.643974",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Exp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 970,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f6a57830.203248",
+        "type": "ui_text",
+        "z": "c1cb5db9.094de",
+        "group": "ef5b801b.aadf9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Puerta",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 970,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "27ed27af.3602c8",
+        "type": "change",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "socketid",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "291e77f3.d4d988"
+            ]
+        ]
+    },
+    {
+        "id": "14d33344e6a56883",
+        "type": "base64",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "342cdb78.d07fe4",
+                "9db3ac9b8c769532"
+            ]
+        ]
+    },
+    {
+        "id": "324f7caaa4360154",
+        "type": "base64",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "342cdb78.d07fe4",
+                "da2ab304f8d5f9bc"
+            ]
+        ]
+    },
+    {
+        "id": "8260f6ea84aa131c",
+        "type": "base64",
+        "z": "c1cb5db9.094de",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "342cdb78.d07fe4",
+                "e3b3d41674908f14"
+            ]
+        ]
+    },
+    {
+        "id": "802b63d129bee504",
+        "type": "file in",
+        "z": "c1cb5db9.094de",
+        "name": "pista1",
+        "filename": "/data/projects/EJERCICIO_AVANZADO_DASHBOARD/media/popup1-prev.jpg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "14d33344e6a56883"
+            ]
+        ]
+    },
+    {
+        "id": "beff0fd3d3e6e8b4",
+        "type": "file in",
+        "z": "c1cb5db9.094de",
+        "name": "pista3",
+        "filename": "/data/projects/EJERCICIO_AVANZADO_DASHBOARD/media/popup3-prev.jpg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "324f7caaa4360154"
+            ]
+        ]
+    },
+    {
+        "id": "91444b70193fe34d",
+        "type": "file in",
+        "z": "c1cb5db9.094de",
+        "name": "pista2",
+        "filename": "/data/projects/EJERCICIO_AVANZADO_DASHBOARD/media/popup2-prev.jpg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "8260f6ea84aa131c"
+            ]
+        ]
+    },
+    {
+        "id": "6f49d660b02e571f",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "81467baf.f38798",
+        "name": "URL Panel Pistas",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div><a href=\"./#!/01\">Panel Pistas </a></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9db3ac9b8c769532",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "bf40a062.1bae4",
+        "name": "Pista Cables",
+        "order": 2,
+        "width": 18,
+        "height": 8,
+        "format": "<style>\n    img{\n        position:absolute;\n        height: 400px;\n    }\n</style>\n<div class=\"imagen\">\n    <img src=\"data:image/jpg;base64,{{msg.payload}}\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 790,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da2ab304f8d5f9bc",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "5dd64cb0.643974",
+        "name": "Pista Exp",
+        "order": 2,
+        "width": 18,
+        "height": 8,
+        "format": "<style>\n    img{\n        position:absolute;\n        height: 400px;\n    }\n</style>\n<div class=\"imagen\">\n    <img src=\"data:image/jpg;base64,{{msg.payload}}\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3b3d41674908f14",
+        "type": "ui_template",
+        "z": "c1cb5db9.094de",
+        "group": "ef5b801b.aadf9",
+        "name": "Pista Puerta",
+        "order": 2,
+        "width": 18,
+        "height": 8,
+        "format": "<style>\n    img{\n        position:absolute;\n        height: 400px;\n    }\n</style>\n<div class=\"imagen\">\n    <img src=\"data:image/jpg;base64,{{msg.payload}}\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 790,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    }
+]
